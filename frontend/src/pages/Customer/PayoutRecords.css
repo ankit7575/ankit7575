@@ -1,0 +1,68 @@
+.payout-records {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payout-summary {
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: #777;
+    text-align: center;
+  }
+  
+  .payout-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .payout-table th, .payout-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .payout-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .payout-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .completed-row {
+    background-color: #e8f5e9; /* Light green for completed */
+  }
+  
+  .pending-row {
+    background-color: #fff3e0; /* Light orange for pending */
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

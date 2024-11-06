@@ -1,0 +1,26 @@
+/* SuccessAlert.css */
+.success-alert {
+  background-color: #d4edda; /* Light green background */
+  border: 1px solid #c3e6cb; /* Slightly darker green border */
+  color: #155724; /* Dark green text color */
+  padding: 15px;
+  border-radius: 5px;
+  margin: 10px 0; /* Margin to separate alerts from other elements */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center the items vertically */
+  font-family: Arial, sans-serif; /* Font style */
+}
+
+.alert-content {
+  display: flex; /* Use flexbox for inner content */
+  align-items: center; /* Center the icon and message vertically */
+}
+
+.success-icon {
+  margin-right: 10px; /* Space between the icon and message */
+  font-size: 20px; /* Size of the success icon */
+}
+
+.success-message {
+  font-size: 16px; /* Font size for the success message */
+}

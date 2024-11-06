@@ -1,0 +1,654 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif; /* Main font for the application */
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Dark text color for contrast */
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #00150f; /* Navbar background color */
+    padding: 15px; /* Padding for the navbar */
+    border-radius: 8px; /* Rounded corners */
+    position: relative; /* Positioning for dropdown */
+  }
+  
+  .menu-toggle {
+    display: none; /* Hide toggle by default */
+    flex-direction: column;
+    cursor: pointer; /* Change cursor to pointer */
+    margin-left: auto; /* Align to the right */
+  }
+  
+  .bar {
+    height: 4px; /* Height of the bars */
+    width: 25px; /* Width of the bars */
+    background-color: white; /* Color of the bars */
+    margin: 3px 0; /* Space between bars */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .menu {
+    display: flex; /* Flex layout for the menu */
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .menu > li {
+    position: relative; /* Required for dropdown positioning */
+    margin-bottom: 10px; /* Space between items */
+  }
+  
+  .menu > li a {
+    display: block; /* Make the whole area clickable */
+    padding: 10px 15px; /* Padding for each link */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+
+  
+  /* Dropdown Styles */
+  .dropdown {
+    display: none; /* Hide dropdowns by default */
+    position: absolute; /* Position relative to the parent */
+    left: 0; /* Align with the left edge of the parent */
+    top: 100%; /* Position below the parent */
+    background-color: #00150f; /* Match with the darker shade of the navbar */
+    padding: 10px; /* Padding for dropdown */
+    border-radius: 5px; /* Rounded corners for dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    z-index: 1; /* Ensure it appears above other content */
+  }
+  
+  .dropdown.open {
+    display: block; /* Show dropdown when open */
+  }
+  
+  .dropdown li {
+    margin: 5px 0; /* Space between dropdown items */
+  }
+  
+  .dropdown a {
+    padding: 8px 15px; /* Padding for dropdown links */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .dropdown a:hover {
+    background-color: #004494; /* Darker shade on hover for dropdown */
+  }
+  
+  /* Page Styles */
+  h1 {
+    font-size: 24px; /* Size for main headings */
+    margin-bottom: 15px; /* Space below headings */
+  }
+  
+  h2 {
+    font-size: 20px; /* Size for subheadings */
+    margin-bottom: 10px; /* Space below subheadings */
+  }
+  
+  p {
+    margin-bottom: 10px; /* Space below paragraphs */
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex; /* Flex layout for form */
+    flex-direction: column; /* Stack form elements */
+    max-width: 400px; /* Max width for form */
+    margin: 20px 0; /* Margin for spacing */
+  }
+  
+  input {
+    padding: 10px; /* Padding for input fields */
+    margin-bottom: 10px; /* Space between fields */
+    border: 1px solid #ccc; /* Light border for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+  }
+  
+  button {
+    padding: 10px; /* Padding for buttons */
+    background-color: #00150f; /* Primary button color */
+    color: white; /* Button text color */
+    border: none; /* No border for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  button:hover {
+    background-color: #00150f; /* Darker shade on hover */
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%; /* Full width for tables */
+    border-collapse: collapse; /* Remove gaps between cells */
+    margin: 20px 0; /* Margin for spacing */
+  }
+  
+  th, td {
+    border: 1px solid #ddd; /* Light border for table cells */
+    padding: 10px; /* Padding for table cells */
+    text-align: left; /* Align text to the left */
+  }
+  
+  th {
+    background-color: #00150f; /* Background for table headers */
+    color: white; /* Text color for headers */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .menu {
+      display: none; /* Hide the menu by default */
+    }
+  
+    .menu.open {
+      display: flex; /* Show the menu when open */
+      position: absolute; /* Absolute positioning */
+      top: 60px; /* Position below the toggle */
+      left: 0; /* Align with the left edge */
+      background-color: #00150f; /* Match navbar color */
+      width: 100%; /* Full width */
+      border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+      padding: 15px 0; /* Padding for dropdown */
+    }
+  
+    .menu-toggle {
+      display: flex; /* Show toggle button on mobile */
+      margin-left: auto; /* Align to the right */
+    }
+  
+    /* Adjust other elements as needed for mobile responsiveness */
+    h1 {
+      font-size: 20px; /* Smaller heading size */
+    }
+  
+    h2 {
+      font-size: 18px; /* Smaller subheading size */
+    }
+  
+    form {
+      width: 100%; /* Full width for form on mobile */
+    }
+  
+    button {
+      width: 100%; /* Full width for buttons on mobile */
+    }
+  }
+  .registration-form-box {
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px 4px rgb(0 0 0 / 27%);
+    background-color: white; /* White background for the form */
+    text-align: center; /* Center the text */
+  }
+  .registration-page {
+
+    background-color: #00150f; /* Light gray background */
+  }
+  
+  .registration-form-box  h1 {
+    margin-bottom: 20px;
+    color: #00150f;
+    font-weight: 900;
+    
+  }
+  .login-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00150f; /* Bootstrap primary color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #00150f; /* Darker shade on hover */
+  }
+  
+  .login-button-container {
+    text-align: center; /* Center the button */
+  }
+  
+
+  .payout-records {
+    padding: 20px;
+    background-color: #f4f4f4; /* Light gray background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  }
+  
+  .payout-records h1 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Darker color for titles */
+  }
+  
+  .payout-table {
+    width: 100%; /* Full width of the container */
+    border-collapse: collapse; /* Collapse borders */
+  }
+  
+  .payout-table th,
+  .payout-table td {
+    padding: 12px; /* Padding for table cells */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ccc; /* Bottom border for table rows */
+  }
+  
+  .payout-table th {
+    background-color: #00150f; /* Header background color */
+    color: white; /* Header text color */
+  }
+  
+  .payout-table tr:hover {
+    background-color: #e9ecef; /* Highlight row on hover */
+  }
+
+  /* Common styles for all sections */
+.section {
+  padding: 20px;
+  background-color: #f4f4f4; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.section h1 {
+  margin-bottom: 20px; /* Space below the heading */
+  color: #333; /* Darker color for titles */
+}
+
+/* Adjust specific styles for each component as needed */
+
+.home-section {
+  padding: 60px 0; /* Increase padding for a spacious layout */
+  background-color: #f8f9fa; /* Light background color for contrast */
+}
+
+.card {
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.card-title {
+  font-weight: bold; /* Emphasize the card titles */
+}
+
+.text-success {
+  font-size: 2.5rem; /* Larger font size for amounts */
+}
+
+.mb-4 {
+  margin-bottom: 2rem !important; /* More space between rows */
+}
+.home-section {
+  padding: 40px 0;
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.card {
+  border-radius: 10px; /* Rounded corners for the card */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px; /* Space below title */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Bootstrap primary color */
+  border: none; /* No border */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-primary:hover {
+  background-color: #00150f; /* Darker shade on hover */
+}
+.newform{
+  max-width: 1920px;
+}
+
+.funds {
+  padding: 20px;
+}
+
+.balance {
+  margin-bottom: 20px;
+}
+
+.funds-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.funds-table th, .funds-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.funds-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.funds-table tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh; /* Limit the maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.terms-content {
+  margin-bottom: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accept-button,
+.close-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accept-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.close-button {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+.funds {
+  padding: 20px;
+}
+
+.balance {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.transactions-summary {
+  margin-bottom: 20px;
+}
+
+.funds-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.funds-table th, .funds-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.funds-table th {
+  background-color: #f2f2f2;
+}
+
+.balance-amount {
+  color: green;
+}
+
+.deposit-amount {
+  color: blue;
+}
+
+.withdrawal-amount {
+  color: red;
+}
+
+.signup-page {
+  display: flex;
+  flex-direction: column; /* Stack title and form vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  background-color: #f4f4f4; /* Light gray background */
+}
+
+.signup-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  width: 300px; /* Fixed width for the form */
+  padding: 20px; /* Padding around the form */
+  background-color: white; /* White background for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.signup-form input {
+  margin-bottom: 15px; /* Space between inputs */
+  padding: 10px; /* Padding inside input fields */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners for inputs */
+  font-size: 16px; /* Font size for inputs */
+}
+
+.signup-form button {
+  padding: 10px;
+  background-color: #00150f; /* Bootstrap primary color */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.signup-form button:hover {
+  background-color: #00150f; /* Darker shade on hover */
+}
+
+.display-form-data {
+  margin: 15px 0; /* Space above and below the form data */
+  color: #333; /* Dark text color for readability */
+  text-align: center; /* Center text */
+}
+.Polaris-Navigation__List{
+  background-color: #04553e;
+}
+
+.referral-number{
+  padding: 10px 10px 10px 10px;
+  background-color: #04553e;
+}
+
+.trade-authentication {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.success-message {
+  text-align: center;
+  color: green;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+
+.payment-hold-button {
+  color: white; /* Or any color that indicates a warning */
+  background: none;
+  border: none;
+  background-color: red;
+  cursor: pointer;
+  text-decoration: underline; /* Optional: Make it look like a link */
+}
+
+.green-button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Some padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Inline-block for button behavior */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.green-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.customer-dashboard {
+  padding: 20px;
+
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.user-details {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin: 20px 0;
+}
+.direct-referral{
+  overflow: scroll;
+}

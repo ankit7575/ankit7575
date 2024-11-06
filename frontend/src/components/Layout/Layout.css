@@ -1,0 +1,90 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif; /* Default font */
+  color: #333; /* Default text color */
+}
+
+.sidebar {
+  width: 350px; /* Width of the sidebar */
+  background-color: #00150f; /* Sidebar background color */
+  padding: 20px; /* Padding inside the sidebar */
+  color: white; /* Text color in sidebar */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: width 0.3s ease; /* Smooth transition for width */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  position: relative; /* Required for dropdown positioning */
+  overflow-y: scroll;
+}
+
+.sidebar h2 {
+  margin: 0 0 20px; /* Margin for heading */
+  font-size: 1.5em; /* Larger font size for heading */
+  color: #fff; /* White color for heading */
+}
+
+.sidebar ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+.sidebar li {
+  margin: 15px 0; /* Space between items */
+}
+
+.sidebar a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px; /* Padding for links */
+  display: block; /* Make the whole area clickable */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for background */
+}
+
+.sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Background change on hover */
+}
+
+.main-content {
+  flex: 1; /* Take remaining space */
+  padding: 20px;
+  background-color: #f4f4f4; /* Light gray background */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.main-content h1 {
+  margin-top: 0; /* Remove top margin for main content title */
+  color: #333; /* Darker color for titles */
+}
+
+.content {
+  flex-grow: 1; /* Allow content area to grow */
+  padding: 20px; /* Padding inside the content area */
+  background-color: #ffffff; /* Background color for content area */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Slightly narrower sidebar for mobile */
+    padding: 15px; /* Reduce padding for mobile */
+  }
+
+  .main-content {
+    padding: 15px; /* Reduce padding for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none; /* Hide sidebar on small screens */
+  }
+
+  .main-content {
+    padding: 10px; /* Further reduce padding for very small screens */
+  }
+}

@@ -1,0 +1,69 @@
+/* src/components/TermsModal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 600px; /* Adjusted width */
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  .terms-content {
+    text-align: left; /* Left-align the terms content */
+    margin-bottom: 20px;
+  }
+  
+  .terms-content h3 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .terms-content p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .modal-actions {
+    margin-top: 20px;
+  }
+  
+  .accept-button, .close-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .accept-button {
+    background-color: #28a745; /* Green for accept */
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .close-button {
+    background-color: #dc3545; /* Red for decline */
+    color: white;
+  }
+  
+  .accept-button:hover {
+    background-color: #218838;
+  }
+  
+  .close-button:hover {
+    background-color: #c82333;
+  }
+  

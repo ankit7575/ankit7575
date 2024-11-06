@@ -1,0 +1,92 @@
+/* TradeAuthentication.css */
+
+.trade-authentication {
+    max-width: 600px; /* Restrict the width of the section */
+    margin: 0 auto; /* Center the section */
+    padding: 20px; /* Padding for spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  h1 {
+    font-size: 24px; /* Heading size */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Darker color for the heading */
+  }
+  
+  .trade-form {
+    display: flex;
+    flex-direction: column; /* Arrange form elements vertically */
+  }
+  
+  .form-group {
+    margin-bottom: 15px; /* Space between form groups */
+  }
+  
+  label {
+    margin-bottom: 5px; /* Space below the label */
+    font-weight: bold; /* Bold labels */
+  }
+  
+  input,
+  select {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .error-message {
+    color: red; /* Red color for error messages */
+    font-size: 0.9em; /* Slightly smaller font size for errors */
+    margin-top: 5px; /* Space above error messages */
+  }
+  
+  .submit-button {
+    padding: 10px 15px; /* Button padding */
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button */
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .success-message {
+    margin-top: 20px; /* Space above success message */
+    padding: 15px; /* Padding around success message */
+    background-color: #dff0d8; /* Light green background for success */
+    color: #3c763d; /* Dark green text */
+    border: 1px solid #d6e9c6; /* Border matching Bootstrap success styles */
+    border-radius: 4px; /* Rounded corners */
+  }
+  .contact-details {
+    margin-top: 30px; /* Space above the contact details section */
+    padding: 20px; /* Padding for spacing */
+    background-color: #f1f1f1; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #ddd; /* Border for definition */
+  }
+  
+  .contact-details h2 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 20px; /* Heading size */
+  }
+  
+  .contact-details p {
+    margin: 5px 0; /* Space between paragraphs */
+  }
+  
+  .contact-details a {
+    color: #007bff; /* Link color */
+    text-decoration: underline; /* Underline links */
+  }
+  
+  .contact-details a:hover {
+    color: #0056b3; /* Darker on hover */
+  }

@@ -1,0 +1,112 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 10px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.dropdown {
+  margin: 10px 0;
+}
+
+.dropdown-title {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f4f4f4;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.dropdown-title:hover {
+  background-color: #e0e0e0;
+}
+
+.dropdown-title .arrow {
+  transition: transform 0.3s;
+}
+
+.dropdown-title.open .arrow {
+  transform: rotate(180deg); /* Flip the arrow when dropdown is open */
+}
+
+.dropdown-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 5px 0 0 10px;
+}
+
+.dropdown-item {
+  text-decoration: none;
+  color: #555;
+  padding: 8px 10px;
+  display: block;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #dcdcdc;
+}
+
+.referral-number {
+  margin-top: auto;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+.Polaris-Navigation__Text {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center align items */
+  justify-content: space-between; /* Ensure space between text and arrow */
+}
+
+.arrow {
+  margin-left: auto; /* Push the arrow to the right end */
+  transition: transform 0.2s; /* Add a transition effect */
+}
+
+.arrow.open {
+  transform: rotate(180deg); /* Rotate the arrow when dropdown is open */
+}

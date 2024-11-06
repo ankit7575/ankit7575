@@ -1,0 +1,26 @@
+/* InfoAlert.css */
+.info-alert {
+  background-color: #d1ecf1; /* Light blue background */
+  border: 1px solid #bee5eb; /* Slightly darker blue border */
+  color: #0c5460; /* Dark teal text color */
+  padding: 15px;
+  border-radius: 5px;
+  margin: 10px 0; /* Margin to separate alerts from other elements */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center the items vertically */
+  font-family: Arial, sans-serif; /* Font style */
+}
+
+.alert-content {
+  display: flex; /* Use flexbox for inner content */
+  align-items: center; /* Center the icon and message vertically */
+}
+
+.info-icon {
+  margin-right: 10px; /* Space between the icon and message */
+  font-size: 20px; /* Size of the info icon */
+}
+
+.info-message {
+  font-size: 16px; /* Font size for the info message */
+}

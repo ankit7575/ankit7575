@@ -1,0 +1,26 @@
+/* ErrorAlert.css */
+.error-alert {
+  background-color: #f8d7da; /* Light red background */
+  border: 1px solid #f5c6cb; /* Slightly darker red border */
+  color: #721c24; /* Dark red text color */
+  padding: 15px;
+  border-radius: 5px;
+  margin: 10px 0; /* Margin to separate alerts from other elements */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center the items vertically */
+  font-family: Arial, sans-serif; /* Font style */
+}
+
+.alert-content {
+  display: flex; /* Use flexbox for inner content */
+  align-items: center; /* Center the icon and message vertically */
+}
+
+.error-icon {
+  margin-right: 10px; /* Space between the icon and message */
+  font-size: 20px; /* Size of the error icon */
+}
+
+.error-message {
+  font-size: 16px; /* Font size for the error message */
+}

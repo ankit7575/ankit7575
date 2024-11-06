@@ -1,0 +1,147 @@
+/* src/pages/Customer/LoginForm.css */
+
+.login-page {
+    display: flex;
+    flex-direction: column; /* Stack title and form vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    width: 300px; /* Fixed width for the form */
+    padding: 20px; /* Padding around the form */
+    background-color: white; /* White background for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.login-form input {
+    margin-bottom: 15px; /* Space between inputs */
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners for inputs */
+    font-size: 16px; /* Font size for inputs */
+}
+
+.login-form button {
+    padding: 10px;
+    background-color: #00150f; /* Bootstrap primary color */
+    color: white; /* White text */
+    border: none; /* No border */
+    width: 100%;
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.login-form button:hover {
+    background-color: #00150f; /* Darker shade on hover */
+}
+
+.register-link {
+    margin-top: 15px; /* Space above the register link */
+}
+
+.register-button {
+    padding: 10px;
+    background-color: #6c757d; /* Secondary color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 10px; /* Add some space above the button */
+}
+
+.register-button:hover {
+    background-color: #5a6268; /* Darker shade on hover */
+}
+
+
+/* src/pages/Customer/RegistrationForm.css */
+
+.registration-page {
+    display: flex;
+    flex-direction: column; /* Stack title and form vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #00150f; /* Light gray background */
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    width: 300px; /* Fixed width for the form */
+    padding: 20px; /* Padding around the form */
+    background-color: white; /* White background for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.registration-form input {
+    margin-bottom: 15px; /* Space between inputs */
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners for inputs */
+    font-size: 16px; /* Font size for inputs */
+}
+
+.registration-form button {
+    padding: 10px;
+    background-color: #00150f; /* Bootstrap primary color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.registration-form button:hover {
+    background-color: #0e241d; /* Darker shade on hover */
+}
+
+.login-link {
+    margin-top: 15px; /* Space above the login link */
+}
+
+.login-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00150f; /* Bootstrap primary color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #0e241d; /* Darker shade on hover */
+  }
+  .password-container {
+    position: relative; /* Position relative to allow absolute positioning of the icon */
+}
+
+.password-input {
+    padding-right: 40px; /* Add padding to make space for the icon */
+}
+
+.toggle-password {
+    position: absolute; /* Position the icon absolutely */
+    right: 10px; /* Align it to the right side */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust to center the icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #007bff; /* Change color as needed */
+    z-index: 1; /* Ensure it's above the input */
+}

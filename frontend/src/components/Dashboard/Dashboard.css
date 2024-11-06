@@ -1,0 +1,24 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh; /* Full height */
+  }
+  
+
+  .content {
+    flex: 1; /* Take the remaining space */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      flex-direction: column; /* Stack sidebar and content vertically */
+    }
+  
+    .sidebar {
+      width: 100%; /* Full width on mobile */
+    }
+  }
+  
